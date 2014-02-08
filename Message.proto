@@ -7,6 +7,7 @@ message IronMessage{
         CONTROL = 1;
         FORM_ERROR = 2;
         USER_INFO = 3;
+        WORKOUT_INFO = 4;
     }
 
     message BodyData {
@@ -27,11 +28,18 @@ message IronMessage{
         optional string id = 1;
     }
 
+    message WorkoutInfo {
+        optional int32 sets = 1;
+        optional int32 reps = 2;
+        optional int32 weight = 3;
+    }
+
     optional MessageType type = 1 [default = BODY];
     optional BodyData bodyData = 2;
     optional ControlData controlData = 3;
     optional FormErrorData errorData = 4;
     optional UserInfo userInfo = 5;
+    optional WorkoutInfo workoutInfo = 6;
 
-    optional int32 headPosition = 6;
+    optional int32 headPosition = 7;
 }
