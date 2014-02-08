@@ -1,0 +1,39 @@
+package Protos;
+option java_package = "com.ironeye";
+option java_outer_classname = "IronEyeProtos";
+
+message IronMessage{
+    enum MessageType{
+        BODY = 0;
+        CONTROL = 1;
+        FORM_ERROR = 2;
+        USER_INFO = 3;
+    }
+
+    message BodyData {
+        optional int32 headPosition = 1;
+        optional int32 neckPosition = 2;
+        optional int32 torsoPosition = 3;
+    }
+
+    message ControlData {
+        optional string command = 1;
+    }
+
+    message FormErrorData {
+        optional string command = 1;
+    }
+
+    message UserInfo {
+        optional string id = 1;
+    }
+
+    optional MessageType type = 1 [default = BODY];
+    optional BodyData bodyData = 2;
+    optional ControlData controlData = 3;
+    optional FormErrorData errorData = 4;
+    optional UserInfo userInfo = 5;
+
+    optional int32 headPosition = 6;
+
+}
