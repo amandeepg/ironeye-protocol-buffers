@@ -1,4 +1,3 @@
-package Protos;
 option java_package = "com.ironeye";
 option java_outer_classname = "IronEyeProtos";
 
@@ -35,5 +34,4 @@ message IronMessage{
     optional UserInfo userInfo = 5;
 
     optional int32 headPosition = 6;
-
 }
