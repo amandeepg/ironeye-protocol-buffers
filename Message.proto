@@ -53,8 +53,11 @@ message IronMessage{
     }
 
     message FormErrorData {
-        optional string command = 1;
+        repeated JointError joint = 1;
+    }
 
+    message JointError {
+        optional JointType jointType = 1;
     }
 
     message UserInfo {
