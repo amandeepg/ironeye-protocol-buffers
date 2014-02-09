@@ -41,7 +41,7 @@ message IronMessage{
     }
 
     message JointData{
-        optional string jointName = 1;
+        optional JointType jointType = 1;
         optional float posX = 2;
         optional float posY = 3;
         optional float posZ = 4;
