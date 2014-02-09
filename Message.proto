@@ -10,18 +10,51 @@ message IronMessage{
         WORKOUT_INFO = 4;
     }
 
+    enum ControlType {
+        QR_CODE_SCANNED = 1;
+        WEIGHT_ENTERED = 2;
+        STOP_TRACKING = 3;
+        VIDEO_RENDERED = 4;
+    }
+
+    enum JointType {
+        RIGHT_HIP = 1;
+        LEFT_SHOULDER = 2;
+        LEFT_ELBOW = 3;
+        LEFT_HAND = 4;
+        RIGHT_FOOT = 5;
+        RIGHT_SHOULDER = 6;
+        TORSO = 7;
+        LEFT_KNEE = 8;
+        LEFT_FOOT = 9;
+        HEAD = 10;
+        NECK = 11;
+        RIGHT_ELBOW = 12;
+        RIGHT_HAND = 13;
+        LEFT_HIP = 14;
+        RIGHT_KNEE = 15;
+
+    }
+
     message BodyData {
-        optional int32 headPosition = 1;
-        optional int32 neckPosition = 2;
-        optional int32 torsoPosition = 3;
+        repeated JointData joint = 1;
+    }
+
+    message JointData{
+        optional string jointName = 1;
+        optional int32 posX = 2;
+        optional int32 posY = 3;
+        optional int32 posZ = 4;
+        optional int32 confidence = 5;
     }
 
     message ControlData {
-        optional string command = 1;
+        optional ControlType type = 1;
     }
 
     message FormErrorData {
         optional string command = 1;
+
     }
 
     message UserInfo {
@@ -44,6 +77,4 @@ message IronMessage{
     optional FormErrorData errorData = 4;
     optional UserInfo userInfo = 5;
     optional WorkoutInfo workoutInfo = 6;
-
-    optional int32 headPosition = 7;
 }
