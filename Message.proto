@@ -58,6 +58,7 @@ message IronMessage{
 
     message JointError {
         optional JointType jointType = 1;
+        optional string error_message = 2;
     }
 
     message UserInfo {
