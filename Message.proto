@@ -66,8 +66,7 @@ message IronMessage{
     }
 
     message WorkoutInfo {
-        optional int32 sets = 1;
-        repeated Set set = 2;
+        repeated Set set = 1;
     }
 
     message Set {
