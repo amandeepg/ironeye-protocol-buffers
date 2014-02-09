@@ -8,6 +8,7 @@ message IronMessage{
         FORM_ERROR = 2;
         USER_INFO = 3;
         WORKOUT_INFO = 4;
+        WORKOUT_UPDATE = 5;
     }
 
     enum ControlType {
@@ -69,6 +70,11 @@ message IronMessage{
         repeated Set set = 1;
     }
 
+    message WorkoutUpdate {
+        optional int32 current_rep = 1;
+        optional int32 current_set = 2;
+    }
+
     message Set {
         optional int32 reps = 1;
         optional int32 weight = 2;
@@ -80,4 +86,5 @@ message IronMessage{
     optional FormErrorData errorData = 4;
     optional UserInfo userInfo = 5;
     optional WorkoutInfo workoutInfo = 6;
+    optional WorkoutUpdate workoutUpdate = 7;
 }
