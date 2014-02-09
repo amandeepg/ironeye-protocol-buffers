@@ -30,8 +30,12 @@ message IronMessage{
 
     message WorkoutInfo {
         optional int32 sets = 1;
-        optional int32 reps = 2;
-        optional int32 weight = 3;
+        repeated Set set = 2;
+    }
+
+    message Set {
+        optional int32 reps = 1;
+        optional int32 weight = 2;
     }
 
     optional MessageType type = 1 [default = BODY];
