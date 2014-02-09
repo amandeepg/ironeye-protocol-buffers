@@ -3,12 +3,12 @@ option java_outer_classname = "IronEyeProtos";
 
 message IronMessage{
     enum MessageType{
-        BODY = 0;
-        CONTROL = 1;
-        FORM_ERROR = 2;
-        USER_INFO = 3;
-        WORKOUT_INFO = 4;
-        WORKOUT_UPDATE = 5;
+        BODY = 1;
+        CONTROL = 2;
+        FORM_ERROR = 3;
+        USER_INFO = 4;
+        WORKOUT_INFO = 5;
+        WORKOUT_UPDATE = 6;
     }
 
     enum ControlType {
