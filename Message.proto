@@ -10,6 +10,7 @@ message IronMessage{
         WORKOUT_INFO = 5;
         WORKOUT_UPDATE = 6;
         SET_START = 7;
+        SET_END = 8;
     }
 
     enum ControlType {
