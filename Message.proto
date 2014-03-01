@@ -18,6 +18,8 @@ message IronMessage{
         WEIGHT_ENTERED = 2;
         STOP_TRACKING = 3;
         VIDEO_RENDERED = 4;
+        START_SET = 5;
+        STOP_SET = 6;
     }
 
     enum JointType {
