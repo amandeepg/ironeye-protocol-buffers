@@ -15,11 +15,10 @@ message IronMessage{
 
     enum ControlType {
         QR_CODE_SCANNED = 1;
-        WEIGHT_ENTERED = 2;
-        STOP_TRACKING = 3;
-        VIDEO_RENDERED = 4;
-        START_SET = 5;
-        STOP_SET = 6;
+        STOP_TRACKING = 2;
+        VIDEO_RENDERED = 3;
+        START_SET = 4;
+        STOP_SET = 5;
     }
 
     enum JointType {
@@ -57,10 +56,10 @@ message IronMessage{
     message BarData {
         optional JointData leftHand2D = 1;
         optional JointData rightHand2D = 2;
-        optional BarPosition bar = 3;
+        repeated BarPoints bar_points = 3;
     }
 
-    message BarPosition {
+    message BarPoints {
         optional float posX = 1;
         optional float posY = 2;
     }
