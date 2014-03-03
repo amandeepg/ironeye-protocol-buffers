@@ -103,5 +103,5 @@ message IronMessage{
     optional UserInfo userInfo = 5;
     optional WorkoutInfo workoutInfo = 6;
     optional WorkoutUpdate workoutUpdate = 7;
-
+    optional int32 weight = 8;
 }
