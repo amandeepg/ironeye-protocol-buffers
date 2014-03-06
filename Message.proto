@@ -12,6 +12,7 @@ message IronMessage{
         SET_START = 7;
         SET_END = 8;
         EXERCISE_END = 9;
+        VIDEO = 10;
     }
 
     enum ControlType {
@@ -96,6 +97,10 @@ message IronMessage{
         optional int32 weight = 2;
     }
 
+    message Video {
+        optional bytes video_data = 1;
+    }
+
     optional MessageType type = 1 [default = BODY];
     optional BodyData bodyData = 2;
     optional ControlData controlData = 3;
@@ -104,4 +109,5 @@ message IronMessage{
     optional WorkoutInfo workoutInfo = 6;
     optional WorkoutUpdate workoutUpdate = 7;
     optional int32 weight = 8;
+    optional Video video = 9;
 }
