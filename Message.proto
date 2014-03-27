@@ -54,6 +54,15 @@ message IronMessage{
         KNEE_ANGLE_CLOSED = 10;
     }
 
+    enum ArrowType {
+        UP = 1;
+        DOWN = 2;
+        LEFT = 3;
+        RIGHT = 4;
+        IN = 5;
+        OUT = 6;
+    }
+
     message BodyData {
         repeated JointData joint = 1;
         optional BarData bar = 2;
@@ -89,7 +98,12 @@ message IronMessage{
     message Error {
         optional ErrorType error_type = 1;
         optional string error_message = 2;
-        repeated JointType joints = 3;
+        repeated JointTypeWrapper joints = 3;
+    }
+
+    message JointTypeWrapper {
+        optional JointType joint = 1;
+        optional ArrowType arrow = 2;
     }
 
     message UserInfo {
