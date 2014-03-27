@@ -61,6 +61,7 @@ message IronMessage{
         RIGHT = 4;
         IN = 5;
         OUT = 6;
+        NONE = 7;
     }
 
     message BodyData {
