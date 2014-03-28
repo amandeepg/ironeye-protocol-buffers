@@ -13,6 +13,7 @@ message IronMessage{
         SET_END = 8;
         EXERCISE_END = 9;
         VIDEO = 10;
+        CHANGE_DOT_COLOUR = 11;
     }
 
     enum ControlType {
@@ -138,4 +139,5 @@ message IronMessage{
     optional WorkoutUpdate workoutUpdate = 7;
     optional int32 weight = 8;
     optional Video video = 9;
+    optional int32 dotColour = 10;
 }
