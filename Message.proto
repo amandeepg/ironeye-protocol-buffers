@@ -47,9 +47,9 @@ message IronMessage{
         FEET_TOO_FAR = 2;
         BAR_TOO_TILTED_LEFT = 3;
         BAR_TOO_TILTED_RIGHT = 4;
-        BACK_NOT_ALIGNED = 5;
-        BACK_ANGLE_OPEN = 6;
-        BACK_ANGLE_CLOSED = 7;
+        HIP_NOT_ALIGNED = 5;
+        HIP_ANGLE_CLOSED = 6;
+        HIP_ANGLE_OPEN = 7;
         KNEES_NOT_ALIGNED = 8;
         KNEE_ANGLE_OPEN = 9;
         KNEE_ANGLE_CLOSED = 10;
